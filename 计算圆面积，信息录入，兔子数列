@@ -1,0 +1,18 @@
+#计算圆面积
+# r = 5#设置半价
+# s = 3.14 * r * r#计算圆的面积
+# print(s)#打印计算结果，ctrl+/ 全部注释
+
+# #信息录入
+# name = input('请输入姓名')
+# spec = input('请输入专业')
+# cls = input('请输入班级')
+# print("%s同学来自%s专业%s班。"%(name,spec,cls))
+
+
+#兔子数列
+# a = 0
+# b = 1
+# while b < 5000:
+#     print(b,end=',')
+#     a,b=b,a+b
