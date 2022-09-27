@@ -1,0 +1,23 @@
+#法一
+import turtle as t
+t.setup(1280,960)#设置画布
+t.title('绘制五角星')#设置题目
+t.pensize(5)#设置笔尺寸
+t.pencolor('red')#设置画笔颜色
+t.fillcolor('red')#设置填充颜色
+t.begin_fill()
+for i in range(5):#遍历循环5次
+    t.forward(250)#直行与距离
+    t.right(180-180/5)#向右转与角度
+    t.speed(10)#设置画笔速度
+t.end_fill()#需要定格写
+t.done()
+#法二
+# import turtle as t
+# while True:
+#     t.speed(8)
+#     t.forward(200)
+#     t.right(180-180/33)
+#     if abs(t.pos()) < 1:
+#         break
+# t.done()
