@@ -1,4 +1,0 @@
-num1 = int(input("加数:"))#从键盘获取内容后转换为整型，存入num1，加数和被加数是变量
-num2 = int(input("被加数:"))#从键盘获取内容后转换为整型，存入num2
-result = num1 + num2#计算num1 + num2，并将结果存入result
-print(result)#将结果result打印到屏幕
