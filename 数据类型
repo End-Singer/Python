@@ -1,0 +1,15 @@
+# 使用print直接输出类型信息
+print(type("Hello world"))
+print(type(2333))
+print(type(3.14))
+# 使用变量存储type()语句的结果
+string_type = type("Hello world")
+int_type = type(2333)
+float_type = type(3.14)
+print(string_type)
+print(int_type)
+print(float_type)
+# 使用type()语句查看变量中储存的数据类型信息
+name = "Hello world"
+name_type = type(name)
+print(name_type)
