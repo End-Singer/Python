@@ -1,0 +1,23 @@
+# 将数字类型转换为字符串
+num_str = str(233)
+print(type(num_str), num_str)
+
+num_float = float(3.14)
+print(type(num_float), num_float)
+# 将字符类型转换为数字
+num1 = int("233")
+print(type(num1), num1)
+
+num2 = float("3.14")
+print(type(num2), num2)
+# 错误示范，想要将字符串转换成数字，必须要求字符串内容全是数字
+# num3 = int("Hello World!")
+# print(type(num3), num3)
+
+# 整数转换浮点数
+float_num = float(233)
+print(type(float_num), float_num)
+
+# 浮点数转换整数,会丢失精度
+int_num = int(3.14)
+print(type(int_num), int_num)
