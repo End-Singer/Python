@@ -1,0 +1,21 @@
+# 单引号定义法
+name = '博丽灵梦'
+print(type(name))
+# 双引号定义法
+name = "博丽灵梦"
+print(type(name))
+# 三引号定义法，写法和多行注释一样
+name = """
+爱丽丝·
+玛格特洛伊德
+"""
+print(type(name))
+# 在字符串内包含双引号
+name = '博丽灵梦"巫女"'
+print(name)
+# 在字符串内包含单引号
+name_ai = "爱丽丝'人偶师'"
+print(name_ai)
+# 转义字符\解除右侧引号的效用
+name_9 = "\"琪露诺\""
+print(name_9)
