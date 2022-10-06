@@ -1,0 +1,18 @@
+# 字符串字面量之间的拼接
+print("日照香炉生紫烟，" + "遥看瀑布挂前川。")
+# 字面量和变量的拼接，字符串不能通过加号和其他类型直接拼接
+year = "2022"
+month = "10"
+print("今天是：" + year + "年" + month + "月")
+
+# 通过占位的形式，完成拼接，%表示占位，s表示讲变量变成字符串放入占位
+year = 2022
+month = 10
+day = 6
+date = "今天是%s年%s月%s日" % (year, month, day)
+print(date)
+# 不同的类型符号完成不同类型的占位
+place = "宁波"
+humidity = 0.85
+date = "今天是%d年%d月%d日，%s的湿度是%f" % (year, month, day, place, humidity)
+print(date)
