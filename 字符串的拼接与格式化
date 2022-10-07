@@ -16,3 +16,13 @@ place = "宁波"
 humidity = 0.85
 date = "今天是%d年%d月%d日，%s的湿度是%f" % (year, month, day, place, humidity)
 print(date)
+
+# 字符串格式化-数字精度控制
+num1 = 233
+num2 = 3.14
+print("数字233宽度限制5，结果是: %5d" % num1)
+# 如果m比数字本身宽度小，m不生效
+print("数字233宽度限制1，结果是: %1d" % num1)
+# 小数精度限制会自动进行四舍五入
+print("数字3.14宽度限制6，小数精度1，结果是: %6.1f" %num2)
+print("数字3.14不限制，小数精度1，结果是: %.1f" %num2)
