@@ -1,0 +1,11 @@
+# 数据输入
+print("你好！请输入日期：")
+date = input()
+print("今天是：%s" % date)
+# input可以在输入内容前做出提示
+date = input("你好！请输入日期：")
+# input输入的数据都当作字符串看待
+print("今天是：%s" % date, type(date))
+# 运用类型转换将输入转换成数字类型
+date = int(date)
+print("今天是：%s" % date, type(date))
