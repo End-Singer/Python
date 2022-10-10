@@ -1,0 +1,25 @@
+# if elif else 可自由组合，满足缩进即可
+print("欢迎来到xx市科技馆")
+if int(input("12岁及以下儿童免费，请告诉我你的年龄：")) > 12:
+    print("您已超龄，请补票10元")
+    if int(input("周一免费，请告诉我今天是周几（1~7）：")) == 1:
+        print("欢迎，请进。")
+    else:
+        print("抱歉，请补票10元")
+else:
+    print("欢迎你，小朋友。")
+# 多条件多层次的逻辑判断
+age = int(input("请输入年龄："))
+if age >= 18:
+    print()
+    if age <= 22:
+        if float(input("请输入您的视力：")) >= 5.0:
+            print("恭喜您视力条件达到要求")
+        elif input("请输入您的学历（高中毕业/大学毕业）：") == "大学毕业":
+            print("恭喜您学历条件达到要求。")
+        else:
+            print("抱歉，您视力和学历都不达标。")
+    else:
+        print("抱歉，您的年龄太大了。")
+else:
+    print("抱歉，您的年龄太小了。")
