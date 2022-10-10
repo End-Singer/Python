@@ -1,0 +1,24 @@
+# 产生随机数 1~10
+import random
+num = random.randint(1,10)
+guess_num = int(input("请输入你猜的数字（1~10）："))
+if guess_num ==num:
+    print("恭喜你第一次就猜对了")
+else:
+    if guess_num > num:
+        print("你猜的数大了")
+    else:
+        print("你猜的数小了")
+    guess_num = int(input("请再次输入你猜的数字"))
+    if guess_num == num:
+        print("恭喜你第二次猜对了")
+    else:
+        if guess_num > num:
+            print("你猜的数大了")
+        else:
+            print("你猜的数小了")
+        guess_num = int(input("请最后一次输入你猜的数字"))
+        if guess_num == num:
+            print("恭喜你最后一次猜对了")
+        else:
+            print("机会用完，你没有猜中。")
