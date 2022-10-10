@@ -1,0 +1,30 @@
+currency = input("请输入货币类型（￥/$）:")
+# 多条件判断下条件是互斥的,从上到下去判断
+if currency == "￥":
+    worth = float(input("请输入人民币金额："))
+    USD = worth * 0.1405
+    print("可兑换美元为%.3f"%USD)
+# elif语句可以写多个
+elif currency == "$":
+    worth = float(input("请输入美元金额："))
+    CNY = worth * 7.1161
+    print("可兑换人民币为%.3f"%CNY)
+else:
+    print("输入错误。")
+
+# 简化代码,可以在条件判断中，直接写input，节约代码量
+if input("请输入货币类型（￥/$）:") == "￥":
+    worth = float(input("请输入人民币金额："))
+    USD = worth * 0.1405
+    print("可兑换美元为%.3f" % USD)
+
+# 猜数字
+num = 10
+if int(input("请输入数字（1~10）：")) == num:
+    print("恭喜回答正确！")
+elif int(input("不对，请再猜一次：")) == num:
+    print("恭喜回答正确！")
+elif int(input("不对，再猜最后一次：")) == num:
+    print("恭喜回答正确！")
+else:
+    print("sorry,答案是10")
