@@ -1,0 +1,13 @@
+# for 临时变量 in 待处理数据集:
+name = "清华大学"
+for x in name:
+    print(x)
+# 数一数“tech otakus save the world.”这句话里有几个t
+sum = 0
+# the_t = "t" # 不用定义这个变量，可以直接在if判断语句中使用x == t
+word = "tech otakus save the world."
+for x in word:
+    # if x == the_t:
+    if x == "t":
+        sum += 1
+print(f"tech otakus save the world.这句话中出现了{sum}次字母t")
