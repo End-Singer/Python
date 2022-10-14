@@ -1,0 +1,29 @@
+'''
+语法一：
+range(num)
+获取一个从0开始，
+到num结束的数字序列（不含num本身）。
+
+语法二：
+range(num1,num2)
+获取一个从num1开始，到num2结束的数字序列（不含num2）
+
+语法3：
+range(num1,num2,step)
+获取一个从num1开始，到num2结束的数字序列（不含num2）
+数字之间的步长，以step为准，step默认1
+'''
+# 语法一 可以达到和while循环一样的效果
+for x in range (10):
+    print(x)
+# 语法二
+for x in range (5,10):
+    print(x)
+# 语法三
+for x in range (1,10,2):
+    print(x)
+# 规范上第二个print不能访问临时变量i，实际可以，但这样不符合规范
+for i in range(5):
+    print()
+print(i)
+# 若要访问临时变量i，请在for前对i进行定义
