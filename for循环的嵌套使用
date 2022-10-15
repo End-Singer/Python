@@ -1,0 +1,24 @@
+# for循环的嵌套
+i = 0
+for i in range(1,31):
+    print(f"锻炼第{i}天")
+    for n in range(1,6):
+        print(f"今天跑了{n}圈")
+print(f"坚持锻炼了{i}天，计划完成")
+# while循环和for循环可以相互嵌套
+i = 0
+for i in range(1,31):
+    print(f"锻炼第{i}天")
+    j = 1
+    while j <= 5:
+        print(f"今天跑了{j}圈")
+        j += 1
+print(f"坚持锻炼了{i}天，计划完成")
+# for循环打印九九乘法表,内层循环数字乘以外层循环数字
+# 外层循环控制行数，x = 1 ~ 9 行
+for x in range(1,10):
+    # 内层循环控制输出，n = 1 ~ (x + 1)
+    for n in range(1, x + 1):
+        # 1 * (x + 1) range 遍历循环减一，即 1 * 1
+        print(f"{n} * {x} = {n * x}\t", end='')
+    print()
