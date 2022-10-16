@@ -1,0 +1,21 @@
+"""
+扶贫账户总额有10000元，给20个贫困户发放补助，每户编号从1到20依次领取，每人可领1000元。
+领取时按贫困程度1级到10级（随机生成），低于5级不发补助。
+如果补助发完了不发补助。
+"""
+sum = 10000
+for p in range(1,21):
+    import random
+    level = random.randint(1,10)
+    print(f"第{p}户的贫困程度为{level}级。",end='')
+    if level >= 5:
+        sum -= 1000
+        print(f"符合补助条件，补助金发放1000元。",end='')
+        if sum != 0:
+            print(f"账户剩余{sum}元")
+        else:
+            print("账户余额不足，停止发放补助。")
+            break
+    else:
+        print(f"第{p}户不符合补助发放条件。")
+        continue
