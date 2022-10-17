@@ -1,0 +1,16 @@
+"""
+变量的作用域是变量作用的范围
+局部变量：定义在函数内部的变量，只在函数内生效
+全局变量：定义在函数外，在函数内外均生效
+"""
+num = 1
+def func_1():
+    print(num)
+def func_2():
+    # 关键字声明a是全局变量
+    global num
+    num = 5
+    print(num)
+func_1()
+func_2()
+print(f"全局变量是 {num}")
