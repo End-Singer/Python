@@ -23,3 +23,34 @@ def add(x):
     print("计算结束")
 result = add(2)
 print(result)
+
+
+
+# 如果函数没有使用return语句返回数据，也是有返回值的
+# 实际是返回特殊的字面量：None，类型是： <class'NoneType>, 表示返回空
+def say ():
+    print("返回None的类型")
+result = say()
+print(f"无返回值的类型是{type(result)}")
+# None还可以用于if判断，None等同于False
+def check_age(age):
+    if age > 18:
+        return "success"
+    else:
+        return None
+result = check_age(16)
+if not result:
+    print("禁止未成年进入。")
+# 为函数添加说明文档，辅助理解函数的作用
+def func(x, y):
+    """
+    func函数可以接收2个参数，进行两数相加的功能
+    :param x:形参x表示一个加数
+    :param y:形参y表示另一个加数
+    :return:返回值是两数相加的结果
+    """
+    z = x + y
+    print(f"2数相加的结果是，{z}")
+    return z
+# 当鼠标悬停在函数上就会出现说明文档
+func(5, 7)
