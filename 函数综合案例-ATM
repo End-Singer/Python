@@ -1,0 +1,46 @@
+money = 500000
+name = input("尊敬的用户，请输入您的姓名：")
+def homepage():
+    print("-------------------主菜单------------------")
+    print(f"尊敬的{name}，欢迎使用自助存取款系统，请选择操作：")
+    print(f"查询余额。\t[请按1]")
+    # 长度不一需要对齐可以使用多次\t
+    print(f"存款。\t\t[请按2]")
+    print(f"取款。\t\t[请按3]")
+    print(f"退出。\t\t[请按4]")
+    print(f"请输入：", end='')
+    return input()
+def check(show_header):
+    # if show_header == True的省略
+    if show_header:
+        print("------------------余额查询-----------------")
+    print(f"您的余额为{money}元。")
+def save(x):
+    print("--------------------存款-------------------")
+    global money
+    money += x
+    check(False)
+def withdraw(n):
+    print("--------------------取款-------------------")
+    global money
+    money -= n
+    check(False)
+while True:
+    keyboard_input = homepage()
+    if keyboard_input == "1":
+        check(True)
+        continue
+    elif keyboard_input == "2":
+        x = float(input("请输入存款金额："))
+        save(x)
+        continue
+    elif keyboard_input == "3":
+        n = float(input("请输入取款金额："))
+        withdraw(n)
+        continue
+    elif keyboard_input == "4":
+        print("感谢您的使用，再见。")
+        break
+    else:
+        print("输入错误，程序结束。")
+        break
