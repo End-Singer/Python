@@ -1,0 +1,12 @@
+# 数据容器可以批量去使用多份数据，一个容器可以容纳多份数据
+# 列表list 列表一次可以存储多个数据
+touhou_list = ["博丽灵梦", "雾雨魔理沙", "八云紫"]
+print(touhou_list)
+print(type(touhou_list))
+# 列表存储的元素可以是不同类型的
+my_list = ["卡哇伊", 2333, True]
+print(my_list)
+print(type(my_list))
+# 列表可以嵌套使用
+sum_list = [my_list, touhou_list]
+print(sum_list)
