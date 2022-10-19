@@ -1,0 +1,13 @@
+name_list = ["博丽灵梦", "雾雨魔理沙", "八云紫"]
+# 列表[下标索引]，从前向后从0开始。下标不可以超出范围。
+# print(name_list[0])
+# print(name_list[2])
+# print(name_list[1])
+# # 倒序取出
+# print(name_list[-1])
+# print(name_list[-2])
+# print(name_list[-3])
+# 取出嵌套列表的元素
+my_list = [[233, 666], ["博丽灵梦", "雾雨魔理沙", "八云紫"]]
+print(my_list[0][1])
+print(name_list[-1][-2])
