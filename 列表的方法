@@ -1,0 +1,59 @@
+# 列表的一系列功能，称为列表的方法
+# 将函数定义为class（类）的成员，那么函数称为：方法。
+# 方法和函数功能一样，有传入参数，有返回值
+"""
+函数的使用：num = add(1, 2)
+方法的使用：student = student()
+          num = student.add(1, 2)
+"""
+# 查找指定元素在列表的下标，查询到的是正向的索引，如果元素不存在会报错
+namelist = ["博丽灵梦", "雾雨魔理沙", "蕾米莉亚"]
+index = namelist.index("蕾米莉亚")
+print(f"蕾米莉亚在列表中的下标索引值是{index}")
+# 修改下标索引的元素值
+namelist[1] = "芙兰朵路"
+print(f"列表被修改元素值后，结果是：{namelist[1]}")
+# 在列表中插入元素
+namelist.insert(1, "十六夜咲夜")
+print(f"列表插入元素后结果是：{namelist}")
+# 追加一个元素到列表的尾部
+namelist.append("红美铃")
+print(f"列表追加元素后是：{namelist}")
+# 追加一批元素，将其他数据容器的内容取出依次追加到列表尾部
+librarylist = ["帕秋莉", "小恶魔"]
+namelist.extend(librarylist)
+print(f"列表追加了一个新的列表后是：{namelist}")
+# 删除元素使用del关键字
+del namelist[0]
+print(f"列表删除一个元素后的结果是：{namelist}")
+# 删除元素使用pop方法，pop方法本质功能是将指定下标元素取出然后返回出去
+devil = namelist.pop(5)
+print(f"通过pop方法取出元素{devil}后，列表为：{namelist}")
+# 不通过下标而是指定一个元素的内容进行删除，从前到后删除某元素在列表中的第一个匹配项
+numlist = ["5", "10", "5", "10", "15"]
+numlist.remove("10")
+# 如果想删除掉第二个10，就需要调用第二次remove方法
+print(f"删除掉第一个指定元素后，结果是：{numlist}")
+# 清空列表
+numlist.clear()
+print(f"清空列表后，结果是：{numlist}")
+# 统计列表中某元素的数量
+numlist = ["5", "10", "5", "10", "15"]
+count = numlist.count("5")
+print(f"元素5在列表里有{count}个")
+# 统计列表内全部元素的数量
+namecount = len(namelist)
+print(f"namelist列表中共有{namecount}个元素。")
+
+# 作业：
+mylist = [21,25,21,23,22,20]
+mylist.append(31)
+print(f"追加一个数字31后，列表为：{mylist}")
+mylist2 = [29, 33 , 30]
+mylist.extend(mylist2)
+print(f"追加列表[29, 33 , 30]后，列表为：{mylist}")
+a = mylist[0]
+b = mylist[9] # [-1]也可以
+print(f"取出的第一个元素是{a}，取出的最后一个元素是{b}")
+c = mylist.index(31)
+print(f"元素31的下标值为{c}")
