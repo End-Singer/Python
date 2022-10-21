@@ -1,0 +1,43 @@
+# 将容器内的元素依次取出进行处理的行为称为：遍历、迭代。
+# 用while循环遍历列表元素
+def list_while_func():
+    list1 = ["1", "2", "3", "4"]
+# 定义变量表示下标，从0开始
+    index = 0
+    while index < len(list1):
+# 用列表[下标]取出元素
+        element = list1[index]
+        print(f"列表的元素：{element}")
+# 循环条件为 下标值<列表的元素数量，每次循环+1
+        index += 1
+# 用for循环遍历列表元素
+def list_for_func():
+    list2 = ["4", "3", "2", "1"]
+    # for 临时变量 in 数据容器：
+    for element in list2:
+        print(f"列表的元素：{element}")
+
+list_while_func()
+# while循环可以自定循环条件，并自行控制，可以无限循环
+list_for_func()
+# for循环不可自定循环条件，只能从容器内一个个取数据
+# for循环理论上不是无限的，因为容器不是无限的
+# for适用于遍历数据容器的场景或简单的固定次数循环场景
+
+# 练习：取出列表中的偶数
+list3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# while循环遍历
+list4 = []
+index = 0
+while index < len(list3):
+    element = list3[index]
+    if element%2 == 0:
+        list4.append(element)
+    index += 1
+print(f"通过while循环，从{list3}中取出偶数，组成新列表{list4}")
+# for循环遍历
+list5 = []
+for element in list3:
+    if element % 2 == 0:
+        list5.append(element)
+print(f"通过for循环，从{list3}中取出偶数，组成新列表{list5}")
