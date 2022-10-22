@@ -1,0 +1,45 @@
+# 字符串也是数据容器
+mihoyo_list = "tech otakus save the world"
+# 通过下标索引取值
+value = mihoyo_list[5]
+value2 = mihoyo_list[-5]
+print(f"从字符串中取值是{value}和{value2}")
+# 字符串是无法修改的数据容器
+# index方法
+value = mihoyo_list.index("save")
+print(f"从字符串中查找save，起始下标是{value}")
+# 字符串.replace 字符串的替换，将字符串内全部的"a", 替换为"b"
+# 注意；不是修改字符串本身而是在返回值得到一个新字符串
+result = mihoyo_list.replace("e", "E")
+print(f"替换之后的新字符串是：{result}")
+# split方法，传入参数即你要按照什么字符串进行切分，这种方法同样不会修改老字符串，而是得到一个新字符串
+result2 = mihoyo_list.split(" ")
+print(f"切分之后的新字符串是：{result2}")
+# strip方法，strip()不传参数有默认值，去除前后空格和回车
+mihoyo_list = "   tech otakus save the world   "
+print(mihoyo_list.strip())
+# strip(字符串)去除前后指定字符串，去除的是[2][3][3]
+mihoyo_list = "233tech otakus save the world332"
+print(mihoyo_list.strip("233"))
+# count方法
+mihoyo_list = "tech otakus save the world"
+count = mihoyo_list.count("e")
+print(f"字符串中e有{count}个")
+# len统计字符串长度
+print(f"mihoyo_list字符串的长度是：{len(mihoyo_list)}")
+#  字符串的遍历
+index = 0
+while index < len(mihoyo_list):
+    print(f"用while循环查看字符串mihoyo_list的元素有{mihoyo_list[index]}")
+    index += 1
+
+for element in mihoyo_list:
+    print(f"用for循环查看字符串mihoyo_list的元素有{element}")
+# 练习
+my_str = "Never Gonna Give You Up"
+count = my_str.count("G")
+print(f"字符串里G有{count}个")
+result3 = my_str.replace(" ", "|")
+print(f"替换之后字符串是{result3}")
+result4 = result3.split("|")
+print(f"分割之后字符串是{result4}")
