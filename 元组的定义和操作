@@ -1,0 +1,54 @@
+# 元素tuple和列表一样可以存储多个不同类型的元素
+# 元组一旦定义不可修改，元组用小括号定义，用逗号隔开
+t1 = (233, '博丽灵梦', True)
+# 定义一个空元组
+t2 = ()
+t3 = tuple()
+print(f"t1的类型是：{type(t1)}, 内容是：{t1}")
+print(f"t2的类型是：{type(t2)}, 内容是：{t2}")
+print(f"t3的类型是：{type(t3)}, 内容是：{t3}")
+# 如果要定义只含一个元素的元组，在元素后需要加","；不加就不是元组而是字符串
+t1 = ("Hello world")
+print(f"t1的类型是：{type(t1)}, 内容是：{t1}")
+# 元组的嵌套
+t2 =((1, 2, 3), ())
+print(f"t2的类型是：{type(t2)}, 内容是：{t2}")
+# 下标索引取出元组中的元素
+a = t2[0][1]
+print(f"从嵌套元组中取出的数据是：{a}")
+# 元组的操作
+# index查找方法
+t1 = (233, '博丽灵梦', True)
+index = t1.index("博丽灵梦")
+print(f"在元组t1中查找博丽灵梦的下标是：{index}")
+# count统计方法
+t3 = (233, '博丽灵梦', True, 233, '博丽灵梦', True)
+count = t3.count(233)
+print(f"t3中233的个数有：{count}个")
+# len函数统计元组元素数量
+number = len(t3)
+print(f"t3中元素的个数有：{number}个")
+# 元组的遍历：while
+index = 0
+while index < len(t3):
+    print(f"元组的元素有：{t3[index]}")
+    index += 1
+# 元组的遍历：for
+for element in t3:
+    print(f"元组的元素有：{element}")
+# 修改元组会报错，但是在元组中嵌套一个list，list可以修改
+t4 = (1, 2 , [1, 2, 3])
+print(f"t4的内容是：{t4}")
+t4[2][1] = 233
+print(f"修改后t4的内容是：{t4}")
+
+# 练习
+YakumoYukari = ("八云紫", 17, ["八云蓝", "油豆腐"])
+old = YakumoYukari.index(17)
+print(f"八云紫年龄的位置是：{old}")
+name = YakumoYukari[0]
+print(f"姓名是：{name}")
+YakumoYukari[2].pop(1)
+print(f"删除油豆腐后为：{YakumoYukari}")
+YakumoYukari[2].append("八云橙")
+print(f"添加八云橙后为：{YakumoYukari}")
