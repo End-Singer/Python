@@ -1,0 +1,46 @@
+# 集合，元素无序，唯一（不重复），集合使用大括号
+# 定义集合 变量名称 = {元素, 元素}
+# 定义空集合 变量名称 = set()
+set1 = {"博丽灵梦", "雾雨魔理沙", "东风谷早苗", "雾雨魔理沙", "东风谷早苗"}
+set_empty = set()
+# 重复内容会自动去除
+print(f"set1的内容是：{set1}, 类型是：{type(set1)}")
+print(f"set_empty的内容是：{set_empty}, 类型是：{type(set_empty)}")
+# 添加新元素，集合不支持下标索引 集合.add(元素)
+set1.add("蕾米莉亚")
+print(set1)
+# 移除元素
+set1.remove("东风谷早苗")
+print(set1)
+# pop 随机取出一个元素
+element = set1.pop()
+print(f"取出的元素是{element}，取出之后集合为{set1}")
+# clear 清空
+set1.clear()
+print(set1)
+# 取差集 得到一个新集合，含有集合1的元素，没有集合2的元素，集合1和2不变
+set1 = {1, 2, 3}
+set2 = {1, 5, 6}
+set3 = set1.difference(set2)
+print(f"取出差集后的结果是{set3}")
+# 消除差集 在集合1的内部删除和集合二相同的元素
+# 结果集合1被修改，集合2不变
+set2.difference_update(set1)
+print(f"消除差集后的结果是{set2}")
+# 并集
+set3 = set1.union(set2)
+print(f"取并集后的结果是{set3}")
+# 统计集合元素个数
+set1 = {1, 2, 3}
+number = len(set1)
+print(f"{set1}的元素个数有{number}个")
+# 集合的遍历，因为集合不支持下标索引，因此不能用whil循环
+set1 = {"博丽灵梦", "雾雨魔理沙", "东风谷早苗"}
+for element in set1:
+    print(f"set1中的元素有：{element}")
+# 练习遍历列表元素添加到集合并打印
+list1 = ["博丽灵梦", "雾雨魔理沙", "东风谷早苗"]
+my_set = set()
+for element in list1:
+    my_set.add(element)
+print(my_set)
