@@ -1,0 +1,60 @@
+# 数据容器都支持遍历，都支持len统计元素数量
+my_list = [1, 2, 3, 4]
+my_tuple = (1, 2, 3, 4)
+my_str = "abcdef"
+my_set = {1, 2, 3, 4}
+my_dict = {"key1": 1, "key2": 2, "key3": 3, "key4": 4}
+# max最大元素
+print(f"列表 最大的元素是: {max(my_list)}")
+print(f"元组 最大的元素是: {max(my_tuple)}")
+print(f"字符串 最大的元素是: {max(my_str)}")
+print(f"集合 最大的元素是: {max(my_set)}")
+print(f"字典 最大的元素是 {max(my_dict)}")
+# min最大元素
+print(f"列表 最小的元素是: {min(my_list)}")
+print(f"元组 最小的元素是: {min(my_tuple)}")
+print(f"字符串 最小的元素是: {min(my_str)}")
+print(f"集合 最小的元素是: {min(my_set)}")
+print(f"字典 最小的元素是: {min(my_dict)}")
+# 类型转换: 容器转列表
+print(f"列表 转列表: {list(my_list)}")
+print(f"元组 转列表: {list(my_tuple)}")
+print(f"字符串 转列表: {list(my_str)}")  # 每个字符都作为单独的元素
+print(f"集合 转列表: {list(my_set)}")
+print(f"字典 转列表: {list(my_dict)}")  # value会丢失
+# 类型转换：容器转元组
+print(f"列表 转元组: {tuple(my_list)}")
+print(f"元组 转元组: {tuple(my_tuple)}")
+print(f"字符串 转元组: {tuple(my_str)}")  # 每个字符都作为单独的元素
+print(f"集合 转元组: {tuple(my_set)}")
+print(f"字典 转元组: {tuple(my_dict)}")  # value会丢失
+# 类型转换：容器转字符串
+print(f"列表 转字符串: {str(my_list)}")
+print(f"元组 转字符串: {str(my_tuple)}")
+print(f"字符串 转字符串: {str(my_str)}")
+print(f"集合 转字符串: {str(my_set)}")
+print(f"字典 转字符串: {str(my_dict)}")  # value不会丢失
+# 类型转换：容器转集合
+print(f"列表 转集合: {set(my_list)}")
+print(f"元组 转集合: {set(my_tuple)}")
+print(f"字符串 转集合: {set(my_str)}")  # 每个字符都作为单独的元素，数据会无序
+print(f"集合 转集合: {set(my_set)}")
+print(f"字典 转集合: {set(my_dict)}")  # value会丢失
+# 容器转字典要求元素是键值对，因此上面的容器转字典会报错
+# 容器通用排序功能 sorted(容器), 排序的结果都会变成列表形式
+my_list = [3, 2, 1, 4]
+my_tuple = (3, 2, 1, 4)
+my_str = "bcade"
+my_set = {3, 2, 1, 4}
+my_dict = {"key3": 1, "key1": 2, "key2": 3, "key4": 4}
+print(f"列表 排序后的结果是: {sorted(my_list)}")
+print(f"元组 排序后的结果是: {sorted(my_tuple)}")
+print(f"字符串 排序后的结果是: {sorted(my_str)}")
+print(f"集合 排序后的结果是: {sorted(my_set)}")
+print(f"字典 排序后的结果是: {sorted(my_dict)}")
+# 反向排序 sorted(容器, reverse=True
+print(f"列表 反向排序后的结果是: {sorted(my_list, reverse=True)}")
+print(f"元组 反向排序后的结果是: {sorted(my_tuple, reverse=True)}")
+print(f"字符串 反向排序后的结果是: {sorted(my_str, reverse=True)}")
+print(f"集合 反向排序后的结果是: {sorted(my_set, reverse=True)}")
+print(f"字典 反向排序后的结果是: {sorted(my_dict, reverse=True)}")
