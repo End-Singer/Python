@@ -1,0 +1,21 @@
+def cal():
+    if std_weight_man * 0.9 <= float(date[2]) <= std_weight_man * 1.1:
+        print("体重正常")
+    elif std_weight_man * 0.8 <= float(date[2]) < std_weight_man * 0.9:
+        print("体重过轻")
+    elif std_weight_man * 1.1 < float(date[2]) <= std_weight_man * 1.2:
+        print("体重过重")
+    elif std_weight_man * 1.2 < float(date[2]):
+        print("肥胖")
+    elif float(date[2]) < std_weight_man * 0.8:
+        print("体重不足")
+
+
+date = input("请输入您的性别(男/女)、身高(cm)、体重(kg)(输入用空格隔开)：")
+date = date.split(" ")
+if date[0] == "男":
+    std_weight_man = (int(date[1]) - 80) * 0.7
+    cal()
+else:
+    std_weight_man = (int(date[1]) - 70) * 0.6
+    cal()
