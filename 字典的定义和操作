@@ -1,0 +1,86 @@
+# key:Value 通过 key 找到 Value
+# 字典定义{key:value, key:value, ......, key:value}
+# 定义空字典 my_dict = {} 或 my_dict = dick()
+name_dict = {"博丽灵梦": 16, "八云紫": 17, "蕾米莉亚": 500}
+# 字典的 key 不可以重复
+# 从字典中获取value
+age = name_dict["博丽灵梦"]
+print(f"博丽灵梦的年龄是:{age}")
+# 字典的嵌套
+stu_grade = {
+    "小明": {
+        "语文": 90,
+        "数学": 80,
+        "英语": 85
+    }, "小红": {
+        "语文": 95,
+        "数学": 85,
+        "英语": 90
+    }, "小李": {
+        "语文": 65,
+        "数学": 75,
+        "英语": 65
+    }
+}
+chi_grade = stu_grade["小明"]["语文"]
+print(f"小明的语文成绩是：{chi_grade}")
+# 更新，新增元素 字典[key] = value
+name_dict = {"博丽灵梦": 16, "八云紫": 1200, "蕾米莉亚": 500}
+age = name_dict["八云紫"]
+print(f"八云紫的年龄是：{age}")
+# 更新时没有对应的key即新增一个元素
+name_dict["芙兰朵路"] = 495
+print(f"更新后的字典为：{name_dict}")
+# 删除元素，通过变量可以接收到取出元素的value
+age = name_dict.pop("八云紫")
+print(f"删除的元素八云紫的年龄是：{age}；删除之后的字典是：{name_dict}")
+# 清空元素
+name_dict.clear()
+print(f"清空之后是：{name_dict}")
+# 获取全部的key，字典.keys()
+name_dict = {"博丽灵梦": 16, "八云紫": 17, "蕾米莉亚": 500}
+keys = name_dict.keys()
+print(f"字典的全部key是：{keys}")
+# 遍历字典，用for循环遍历keys，字典不能用while循环
+# 方法1
+for key in keys:
+    print(f"字典name_dict的key有：{key}")
+# 方法2 直接对字典进行for循环，每次循环都是直接得到key
+for key in name_dict:
+    print(f"字典的key有：{key}")
+# 统计字典内的元素数量
+number = len(name_dict)
+print(f"字典name_dict里的元素有{number}个")
+
+# 练习-精准扶贫
+poor_dict = {
+    "A村": {
+        "贫困原因": "干旱",
+        "收入": 2000,
+        "等级": 5},
+    "B村": {
+        "贫困原因": "洪水",
+        "收入": 7500,
+        "等级": 3},
+    "C村": {
+        "贫困原因": "台风",
+        "收入": 8000,
+        "等级": 2},
+    "D村": {
+        "贫困原因": "辍学",
+        "收入": 3000,
+        "等级": 5},
+    "E村": {
+        "贫困原因": "疾病",
+        "收入": 6000,
+        "等级": 4},
+}
+for key in poor_dict:
+    inf = poor_dict[key]
+    print(f"扶贫之前贫困村{key}的信息为：{inf}")
+    if poor_dict[key]["等级"] == 5:
+        poor_dict[key]["收入"] += 2500
+        poor_dict[key]["等级"] -= 1
+for key in poor_dict:
+    inf = poor_dict[key]
+    print(f"精准扶贫后贫困村{key}的信息为：{inf}")
