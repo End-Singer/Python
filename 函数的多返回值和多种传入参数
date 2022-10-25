@@ -1,0 +1,48 @@
+def text_return():
+    return 1, "hello world", True
+
+
+# 按照返回值的顺序，用多个变量接收返回值，
+# 变量之间用逗号隔开，支撑不同类型的数据return
+x, y, z = text_return()
+print(x)
+print(y)
+print(z)
+
+
+# 函数的多种传参方式
+def user_info(name, age, gender):
+    print(f"姓名是：{name}，年龄是：{age}， 性别是：{gender}")
+
+
+# 位置参数-默认使用模式
+user_info("灵梦", 16, "女")
+# 关键字参数 顺序不受限制
+# 位置参数和关键字参数混用，位置参数一定要在前
+user_info("魔理沙", gender="女", age=16)
+
+
+# 缺省参数(不输入参数即为默认参数，默认参数必须定义在最后)
+def user_info(name, age, gender="女"):
+    print(f"姓名是：{name}，年龄是：{age}， 性别是：{gender}")
+
+
+user_info("妖梦", 16)
+
+
+# 不定长参数（可变参数），用于不确定调用的时候会传递多少个参数
+# 不定长参数的类型: 位置传递，关键字传递
+# 1.位置传递 传进的所有参数都会被变量args收集，根据位置合并成一个元组
+def user_info(*args):
+    print(f"args参数的类型是：{type(args)}，内容是：{args}")
+
+
+user_info("灵梦", 16, "女")
+
+
+# 2.关键字传递，参数是“键=值‘形式的形式的情况下，所有的”键=值“都会被kwargs接收组成字典
+def user_info(**kwargs):
+    print(f"args参数的类型是：{type(kwargs)}，内容是：{kwargs}")
+
+
+user_info(name="灵梦", age=16, gender="女")
