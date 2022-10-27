@@ -1,0 +1,26 @@
+# 函数本身也可作为参数传入另一个函数内
+# 这是一种计算逻辑的传递，而非数据的传递
+def f1(x, y):
+    result = f2(x, y)  # 确定f2是函数
+    print(f"f2的参数类型是：{type(f2)}")
+    print(f"计算的结果是：{result}")
+
+
+def f2(x, y):
+    return x + y
+
+
+# 调用并传入函数
+f1(1, 2)
+# 匿名函数lambda
+# def关键字，可以定义带有名称的函数，可以重复使用
+# lambda关键字，可以定义匿名函数，只可临时使用一次
+# lambda 传入参数：函数体（只能写一行代码）
+a = eval(input("a="))
+b = eval(input("b="))
+def f1(f3):
+    result = f3(a, b)  # 确定f2是函数
+    print(f"计算的结果是：{result}")
+
+
+f1(lambda a, b: a * b)
