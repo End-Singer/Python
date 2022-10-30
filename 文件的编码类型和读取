@@ -1,0 +1,39 @@
+# 编码技术将内容翻译成0和1存入
+# 常见的编码 UTF-8 GBK Big5 等 UTF-8是目前全球通用的编码
+# 文件的读取操作
+# 打开文件 open(name,mode,encoding)
+# name目标文件名的字符串（可以包含所在文件的具体路径）
+# mode设置打开文件的模式（访问模式）：只读，写入，追加等。
+# encoding 编码格式
+# 打开文件
+import time
+
+f = open("D:/测试.txt", "r", encoding="UTF-8")
+print(type(f))
+# read方法 文件对象.read(num) num表示读取的数据长度单位字节，不写就是读取所有
+# print(f"read方法读取8个字节的结果：{f.read(8)}")
+# # 在程序中多次调用read会从上一个read的结尾处读取
+# print(f"read方法读取全部内容的结果：{f.read()}")
+print("--------------------------------------------")
+# readlines方法 按照行的方法将整个内容进行一次性读取，返回一个列表，每一行的数据作为一个元素。
+# lines = f.readlines()
+# print(f"lines对象的类型是{type(lines)}")
+# # 由于受到12和14行的影响，读取不到lines对象的内容，注释掉上面的read方法才能读取
+# # lines还会读取到换行符\n
+# print(f"lines对象的内容是{lines}")
+# readline方法 一次读取一行内容
+# line1 = f.readline()
+# line2 = f.readline()
+# line3 = f.readline()
+# print(f"第一行的内容是：{line1}")
+# print(f"第二行的内容是：{line2}")
+# print(f"第三行的内容是：{line3}")
+# for循环读取文件行
+# for line in f:
+#     print(f"每的内容是：{line}")
+# # 文件的关闭close()，解除python对文件的占用
+# f.close()
+# with open语法 可在操作完成后自动关闭，避免忘掉close方法。
+with open("D:/测试.txt", "r", encoding="UTF-8") as f:
+    for line in f:
+        print(f"每的内容是：{line}")
