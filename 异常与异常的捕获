@@ -1,0 +1,38 @@
+"""
+try:
+    可能发生错误的代码
+except:
+    如果出现异常执行的代码
+让程序不因为一个错误之间停止运行抛出错误，而是继续运行
+"""
+try:
+    1 / 0
+except:
+    print("出现了异常")
+# 捕获指定异常
+try:
+    1 / 0
+except ZeroDivisionError as e:
+    print("出现了除数不能为0的异常")
+    print(e)
+# 捕获多个异常
+try:
+    print(name)
+    # 1 / 0
+except (ZeroDivisionError, NameError) as e:
+    print("出现了除数不能为0的异常 或者 变量未定义")
+    print(e)
+# 捕获全部异常except: 或者 except Exception as e:
+try:
+    # 1 / 0
+    #print(name)
+    f = open("D:/bug.txt", "r", encoding="UTF-8")
+except Exception as e:
+    print(f"出现异常了{e}")
+    f = open("D:/bug.txt", "w", encoding="UTF-8")
+# else表示没有出现异常要执行的代码
+else:
+    print("运行成功，没有异常")
+# finally 有没有异常都要执行的代码
+finally:
+    f.close()
