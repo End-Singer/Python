@@ -1,0 +1,21 @@
+import time
+# 打开文件，不存在的文件，r，w，a
+f = open("D:/test.txt", "w", encoding="UTF-8")
+# write写入
+f.write("Hello World!")
+# flush刷新
+f.flush()  # 将内存中的内容写入硬盘
+# close关闭
+f.close()
+# w会把文件的内容全部清空重新写入
+f = open("D:/test.txt", "w", encoding="UTF-8")
+f.write("博丽灵梦")
+# close()方法，带有flush功能
+f.close()
+# 文件的追加
+# 用a模式打开文件
+f = open("D:/test.txt", "a", encoding="UTF-8")
+# write写入文件，需要换行使用\n
+f.write("\n蕾米莉亚")
+# close关闭
+f.close()
