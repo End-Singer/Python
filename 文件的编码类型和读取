@@ -37,3 +37,20 @@ print("--------------------------------------------")
 with open("D:/测试.txt", "r", encoding="UTF-8") as f:
     for line in f:
         print(f"每的内容是：{line}")
+# 练习法一
+# fileword = open("D:/word.txt", "r", encoding="UTF-8")
+# str1 = fileword.read()
+# print(str1)
+# count = str1.count("itheima")
+# print(f"word.txt中有{count}个itheima")
+# 法二
+count = 0 #使用count变量来统计出现的次数
+fileword = open("D:/word.txt", "r", encoding="UTF-8")
+for line in fileword:
+    line = line.strip() # 去除开头结尾的空格和换行符
+    words = line.split(" ")
+    print(words)
+    for word in words:
+        if word == "itheima":
+            count += 1
+print(f"word.txt中有{count}个itheima")
