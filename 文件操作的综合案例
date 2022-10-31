@@ -1,0 +1,32 @@
+# 打开文件得到文件对象，准备读取
+f1 = open("D:/touhou.txt", "r", encoding="UTF-8")
+# 打开文件得到文件对象，准备写入
+f2 = open("D:/touhou_human.txt", "w", encoding="UTF-8")
+# for line in f1:
+#     line = line.strip()
+#     lists = line.split(" ")
+#     for girl in lists:
+#         if girl != "人类":
+#             continue
+#         else:
+#             print(lists)
+#             namestr = str(lists)
+#             # 由于前面使用了strip()操作，因此需要手动写入换行符
+#             f2.write(namestr)
+#             f2.write("\n")
+# f1.close()
+# f2.close()
+# for循环读取文件
+for line in f1:
+    line = line.strip()
+    # 判断内容，将满足内容写出
+    if line.split(" ")[1] != "人类":
+        continue  # 跳过本次内容
+    print(line)
+    # 写出内容
+    f2.write(line)
+    # 手动写出换行符
+    f2.write("\n")
+# 关闭两个文件
+f1.close()
+f2.close()
