@@ -1,0 +1,19 @@
+# 定义一个出现异常的方法
+def func1 ():
+    print("执行func1")
+    num = 1 / 0
+    print("func1结束")
+# 定义一个无异常的方法，调用上面的方法
+def func2 ():
+    print("执行func2")
+    func1()
+    print("func2结束")
+def main():
+    try:
+        func2()
+    except Exception as e:
+        print(e)
+
+
+# 目的：如果想要捕获异常可以在最顶层级捕获错误
+main()
