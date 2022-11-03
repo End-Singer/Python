@@ -1,0 +1,19 @@
+# 模块是一个.py文件，能定义函数，类和变量，也能有可执行代码
+# 作用，当作工具包使用
+# 语法：[from 模块名] import [模块|类|变量|函数|*][as 别名]
+# 导入时间模块，按ctrl + 左键 可以查看模块源代码
+import time
+print("Hello")
+# 让程序暂停5秒钟执行，通过.可以使用模块的全部功能
+time.sleep(3)
+print("World")
+# from 模块名 import 功能名 (使用特定的功能)
+# from 模块名 import * (使用全部功能)
+from time import *
+sleep(3)  # 不用.就能使用
+print("Hello World")
+# import 模块名 as 别名 (给模块命名)
+import time as t
+t.sleep(1)
+from time import sleep as sl
+sl(1)
