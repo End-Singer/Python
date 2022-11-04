@@ -1,0 +1,24 @@
+# 新建一个python文件，并定义一个函数
+import module1
+module1.test1(2, 3)
+# 导入不同模块的同名功能，会使用最后引用的模块
+# 第一个模块的同名功能会被覆盖
+# 如果需要测试模块内的函数，在外部又不需要运行测试代码
+# 可以使用if __name__ == '__main__':
+# from 模块名 import * 可以使用__all__中的所有函数
+# 如果没有使用__all__，就会导入全部函数
+
+
+#module1
+def test1(x, y):
+    print(x + y)
+
+
+if __name__ == '__main__':
+    test1(2, 3)
+
+def test2(x, y):
+    print(x - y)
+
+
+__all__ = ["test1"]
