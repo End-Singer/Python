@@ -1,0 +1,18 @@
+# 包是一个文件夹，在该文件夹下包含了一个__init__.py文件，该文件夹包含多个模块文件
+# import 包名.模块名
+import my_package.my_module1
+import my_package.my_module2
+my_package.my_module1.info_print()
+my_package.my_module2.info_print2()
+# from 包名 import 模块名(from引用在语句中不用再写包名)
+from my_package import my_module1
+my_module1.info_print()
+# from 包名.模块名 import 功能名
+from my_package.my_module2 import info_print2
+info_print2()
+# 在__iniy__.py中添加__all__可以使用import * 功能
+# from 包名 import *
+# 模块名.目标
+from my_package import *
+my_module1.info_print()
+my_module2.info_print2()
